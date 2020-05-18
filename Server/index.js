@@ -6,8 +6,8 @@ const app = express();
 
 app.use(cors());
 
-app.listen(4000, () => {
-	console.log('Server Works !!! At port 4000');
+app.listen(8000, () => {
+	console.log('Server Works !!! At port 8000');
 });
 
 app.get('/downloadmp3', async (req, res, next) => {
@@ -25,8 +25,6 @@ app.get('/downloadmp3', async (req, res, next) => {
 			format: 'mp3',
 			filter: 'audioonly',
 		}).pipe(res);
-	} catch (err) {
-		console.error(err);
 	}
 });
 
